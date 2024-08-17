@@ -238,6 +238,7 @@ Transform:
   - {fileID: 352881453}
   - {fileID: 504635770}
   - {fileID: 1964976287}
+  - {fileID: 2044216818}
   - {fileID: 1217513661}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -286,11 +287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseIndicator: {fileID: 504635769}
-  cellIndicator: {fileID: 1217513660}
   inputManager: {fileID: 1451105555}
   grid: {fileID: 1107742163}
   database: {fileID: 11400000, guid: c0826d089fb67d84ebd0731b9be94822, type: 2}
   gridVisualization: {fileID: 1285386763}
+  preview: {fileID: 2044216819}
 --- !u!1 &481655555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2185,54 @@ Transform:
   - {fileID: 1285386767}
   m_Father: {fileID: 253695027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2044216817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044216818}
+  - component: {fileID: 2044216819}
+  m_Layer: 0
+  m_Name: PreviewsSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044216818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044216817}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.4513631, y: 0.25012034, z: 0.23945676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 253695027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044216819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044216817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae292dc54814664c8eeda57de85c0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewYOffset: 0.06
+  cellIndicator: {fileID: 1217513660}
+  previewMaterialPrefab: {fileID: 2100000, guid: 1a13f7ea17aae34408eba57d7e1a97dd,
+    type: 2}
 --- !u!1 &2056538866
 GameObject:
   m_ObjectHideFlags: 0
