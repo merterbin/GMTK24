@@ -9,6 +9,7 @@ TagManager:
   - sedan
   - Ladder
   - LadderTop
+  - DoorInteract
   layers:
   - Default
   - TransparentFX
