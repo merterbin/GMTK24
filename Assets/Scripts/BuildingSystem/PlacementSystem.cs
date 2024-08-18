@@ -8,6 +8,8 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     private InputManager inputManager;
 
+  
+
     [SerializeField]
     private Grid grid;
 
