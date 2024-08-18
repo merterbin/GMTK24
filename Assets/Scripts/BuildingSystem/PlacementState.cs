@@ -13,6 +13,7 @@ public class PlacementState : IBuildingState
     GridData floorData;
     GridData furnitureData;
     ObjectPlacer objectPlacer;
+    PlaneArea planeArea;
 
     public PlacementState(int iD,
                         Grid grid,
@@ -20,7 +21,8 @@ public class PlacementState : IBuildingState
                         ObjectsDatabaseSO database,
                         GridData floorData,
                         GridData furnitureData,
-                        ObjectPlacer objectPlacer)
+                        ObjectPlacer objectPlacer,
+                        PlaneArea planeArea)
     {
         ID = iD;
         this.grid = grid;
@@ -29,6 +31,7 @@ public class PlacementState : IBuildingState
         this.floorData = floorData;
         this.furnitureData = furnitureData;
         this.objectPlacer = objectPlacer;
+        this.planeArea = planeArea;
 
         selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
         if (selectedObjectIndex > -1)
@@ -39,7 +42,7 @@ public class PlacementState : IBuildingState
         }
         else
             throw new System.Exception($"No object with ID {iD}");
-
+        this.planeArea = planeArea;
     }
 
     public void EndState()
@@ -75,7 +78,7 @@ public class PlacementState : IBuildingState
             floorData :
             furnitureData;
 
-        return selectedData.CanPlaceObejctAt(gridPosition, database.objectsData[selectedObjectIndex].Size);
+        return selectedData.CanPlaceObejctAt(gridPosition, database.objectsData[selectedObjectIndex].Size,planeArea);
     }
 
     public void UpdateState(Vector3Int gridPosition)

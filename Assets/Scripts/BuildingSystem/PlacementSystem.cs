@@ -25,6 +25,9 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     private PreviewSystem preview;
 
+    [SerializeField]
+    private PlaneArea planeArea;
+
     private Vector3Int lastDetectedPosition = Vector3Int.zero;
 
     IBuildingState buildingState;
@@ -46,7 +49,8 @@ public class PlacementSystem : MonoBehaviour
                                            database,
                                            floorData,
                                            furnitureData,
-                                           objectPlacer);
+                                           objectPlacer,
+                                           planeArea);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
     }
@@ -55,7 +59,7 @@ public class PlacementSystem : MonoBehaviour
     {
         StopPlacement();
         gridVisualization.SetActive(true);
-        buildingState = new RemovingState(grid, preview, floorData, furnitureData, objectPlacer);
+        buildingState = new RemovingState(grid, preview, floorData, furnitureData, objectPlacer, planeArea);
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
     }
