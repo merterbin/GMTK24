@@ -50942,9 +50942,6 @@ MonoBehaviour:
   - {fileID: 1081471042}
   - {fileID: 1919761605}
   waypointsIndex: 1
-  frontCheck: []
-  speed: 10
-  stoppingDistance: 5
 --- !u!195 &1404413924
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -77358,6 +77355,11 @@ PrefabInstance:
     - target: {fileID: 4911480665168549383, guid: abf8d304235f3944d9c20da3354cf26c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722490696631788997, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
