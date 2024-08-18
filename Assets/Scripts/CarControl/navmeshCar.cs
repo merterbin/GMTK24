@@ -9,13 +9,12 @@ public class NavMashCar : MonoBehaviour
     public GameObject[] waypoints;
     NavMeshAgent _navMashCar;
     public int waypointsIndex = 1;
-    public Transform[] frontCheck;
-    public float speed = 10f;
-    public float stoppingDistance = 5f;
 
     void Start()
     {
         _navMashCar = GetComponent<NavMeshAgent>();
+        Rigidbody rb = GetComponent<Rigidbody>();
+        Collider collider = rb.GetComponent<Collider>();
         if (waypoints.Length > 0)
         {
             _navMashCar.SetDestination(waypoints[waypointsIndex].transform.position);
@@ -26,7 +25,6 @@ public class NavMashCar : MonoBehaviour
     void Update()
     {
         goAroundwaypoints();
-        //checkDistance();
     }
     public void goAroundwaypoints()
     {
@@ -66,15 +64,21 @@ public class NavMashCar : MonoBehaviour
     //        }
     //    }
     //}
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("ÇARPTI");
-    //    Debug.Log(collision.gameObject.tag);
-    //    if (collision.gameObject.CompareTag("Car"))
-    //    {
-    //        Debug.Log("ÝF ÇARPTI");
-    //        _navMashCar.speed = 0f;
-    //    }
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.CompareTag("Police") || collision.gameObject.CompareTag("sedan"))
+        {
+            this._navMashCar.speed = 0f;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.CompareTag("Police") || collision.gameObject.CompareTag("sedan"))
+        {
+            this._navMashCar.speed = 4f;
+        }
+    }
 
 }
