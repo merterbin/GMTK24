@@ -51,12 +51,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Grid_Thickness: 0.05
+    - _Grid_Thickness: 0.009
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Transparent: 0
     m_Colors:
     - _Background_Color: {r: 0.18039216, g: 0.627451, b: 0.14901961, a: 1}
-    - _Cell_Size: {r: 1, g: 1, b: 0, a: 0}
+    - _Cell_Size: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Grid_Color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
