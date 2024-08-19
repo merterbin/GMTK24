@@ -462,7 +462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &171005131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2407,6 +2407,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: buildPanel
+      value: 
+      objectReference: {fileID: 171005130}
     - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
         type: 3}
       propertyPath: deskCamera
