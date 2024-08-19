@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,14 +9,16 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     public float movementduration = 1.3f;
+    public GameObject canvas;
+    public GameObject settingCanvas;
     public void PlayButton()
     {
         StartCoroutine(StopAndLoadNextScene());
     }
     private IEnumerator StopAndLoadNextScene()
     {
-        yield return new WaitForSeconds(movementduration); // Belirtilen süre kadar bekle
-        SceneManager.LoadScene(2); // Diðer sahneyi yükle ("NextSceneName" yerine sahne adýný yaz)
+        yield return new WaitForSeconds(movementduration);
+        SceneManager.LoadScene(1); 
     }
     public void QuitButton()
     {
@@ -23,6 +26,13 @@ public class MainMenuScript : MonoBehaviour
     }
     public void Settings()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine (WaitForAnimation());
+        
+    }
+    private IEnumerator WaitForAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        settingCanvas.SetActive(true);
+        canvas.SetActive(false);
     }
 }

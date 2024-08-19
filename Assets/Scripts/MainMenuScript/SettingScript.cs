@@ -12,7 +12,8 @@ public class SettingScript : MonoBehaviour
 {
     public Slider slider;
     private float volume = 0;
-    // Start is called before the first frame update
+    public GameObject canvas;
+    public GameObject settingCanvas;
     public AudioMixer audioMixer;
     public void Start()
     {
@@ -36,10 +37,7 @@ public class SettingScript : MonoBehaviour
     }
     public void closeSettings()
     {
-        SceneManager.LoadScene(0);
-    }
-    void Awake()
-    {
-        DontDestroyOnLoad(slider); // Bu obje sahneler arasýnda yok edilmez
+        canvas.SetActive(true);
+        settingCanvas.SetActive(false);
     }
 }
