@@ -41,7 +41,7 @@ public class PlayerBuild : MonoBehaviour
     private void Update()
     {
   
-        if (Input.GetKeyDown(KeyCode.F) && isDeskArea)
+        if (Input.GetKeyDown(KeyCode.E) && isDeskArea)
         {
             if (CameraSwitcher.isActiveCamera(mainCamera) && deskCamera!= null)
             {
@@ -67,6 +67,7 @@ public class PlayerBuild : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Desk"))
         {
+            Debug.Log("desk");
             isDeskArea = true;
         }
     }
