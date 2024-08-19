@@ -8,13 +8,19 @@ public class PreviewSystem : MonoBehaviour
 
     [SerializeField]
     private GameObject cellIndicator;
-    private GameObject previewObject;
+    [SerializeField]
+    private Vector3 cellIndicatorSize = Vector3.one;
 
+    private Renderer cellIndicatorRenderer;
+
+    private GameObject previewObject;
     [SerializeField]
     private Material previewMaterialPrefab;
     private Material previewMaterialInstance;
 
-    private Renderer cellIndicatorRenderer;
+    [SerializeField]
+    private ObjectPlacer placer;
+    
 
     private void Start()
     {
@@ -26,6 +32,7 @@ public class PreviewSystem : MonoBehaviour
     public void StartShowingPlacementPreview(GameObject prefab, Vector2Int size)
     {
         previewObject = Instantiate(prefab);
+        previewObject.transform.localScale = placer.size;
         PreparePreview(previewObject);
         PrepareCursor(size);
         cellIndicator.SetActive(true);

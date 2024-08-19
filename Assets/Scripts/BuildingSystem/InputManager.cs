@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField]
     private Camera sceneCamera;
+
 
     private Vector3 lastPosition;
 

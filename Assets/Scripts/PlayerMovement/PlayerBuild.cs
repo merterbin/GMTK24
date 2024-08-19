@@ -10,9 +10,11 @@ public class PlayerBuild : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera deskCamera = null;
 
+    [SerializeField]
+    private GameObject buildPanel;
+
     public static bool isMain = false;
     public static bool isBuilding = false;
-
     public static bool isDeskArea = false;
 
     private void OnEnable()
@@ -43,14 +45,20 @@ public class PlayerBuild : MonoBehaviour
         {
             if (CameraSwitcher.isActiveCamera(mainCamera) && deskCamera!= null)
             {
+                buildPanel.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 CameraSwitcher.SwitchCamera(deskCamera);
                 isMain = false;
                 isBuilding = true;
             }
             else {
                 CameraSwitcher.SwitchCamera(mainCamera);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 isMain = true;
                 isBuilding = false;
+                buildPanel.SetActive(false);
             }
         }
     }

@@ -13,12 +13,18 @@ public class ObjectPlacer : MonoBehaviour
     private GameObject startLocation;
 
     [SerializeField]
+    public Vector3 size = Vector3.one;
+    [SerializeField]
+    private float height;
+
+    [SerializeField]
     private ScaleBuildingSystem scaleBuildingSystem;
 
     public int PlaceObject(GameObject prefab, Vector3 position)
     {
         GameObject newObject = Instantiate(prefab);
-        newObject.transform.position = position;
+        newObject.transform.position = new Vector3(position.x,height,position.z); 
+        newObject.transform.localScale = size;
         placedGameObject.Add(newObject);
         TriggerScaleBuilding(CalculateGridPosition(startLocation, newObject), prefab);
         return placedGameObject.Count - 1;
