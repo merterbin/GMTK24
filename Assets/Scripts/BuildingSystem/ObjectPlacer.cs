@@ -10,6 +10,9 @@ public class ObjectPlacer : MonoBehaviour
     private List<GameObject> placedGameObject = new();
 
     [SerializeField]
+    private GameObject builds;
+
+    [SerializeField]
     private GameObject startLocation;
 
     [SerializeField]
@@ -23,9 +26,11 @@ public class ObjectPlacer : MonoBehaviour
     public int PlaceObject(GameObject prefab, Vector3 position)
     {
         GameObject newObject = Instantiate(prefab);
+        newObject.transform.SetParent(builds.transform);
         newObject.transform.position = new Vector3(position.x,height,position.z); 
         newObject.transform.localScale = size;
         placedGameObject.Add(newObject);
+        Debug.Log(CalculateGridPosition(startLocation, newObject));
         TriggerScaleBuilding(CalculateGridPosition(startLocation, newObject), prefab);
         return placedGameObject.Count - 1;
     }

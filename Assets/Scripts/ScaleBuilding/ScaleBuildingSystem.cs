@@ -19,12 +19,17 @@ public class ScaleBuildingSystem : MonoBehaviour
 
     public void AddItem(Vector3 gridPosition, GameObject prefab)
     {
-        GameObject scaleObject = Instantiate(prefab);
-        scaleObject.transform.SetParent(ScaleBuilding.transform);
-        scaleObject.transform.position = new Vector3(gridPosition.x * position.x, gridPosition.y * position.y, gridPosition.z * position.z);
-        scaleObject.transform.position = scaleObject.transform.position + new Vector3(50f, 0f, 0f);
+        GameObject scaleObject = Instantiate(prefab,ScaleBuilding.transform);
+        //scaleObject.transform.SetParent(ScaleBuilding.transform,true);
+
+        Vector3 originPosition = new Vector3(gridPosition.x * position.x, gridPosition.y * position.y, gridPosition.z * position.z);
+        //scaleObject.transform.localPosition = scaleObject.transform.localPosition + new Vector3(50f,0f,10f);
+        scaleObject.transform.localPosition = scaleObject.transform.localPosition + originPosition;
+
+      
         scaleObject.transform.localScale = scale;
     }
+
 
     
 }
