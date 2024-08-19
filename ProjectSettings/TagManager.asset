@@ -11,6 +11,11 @@ TagManager:
   - LadderTop
   - DoorInteract
   - Desk
+  - Plane1Trigger
+  - Plane2Trigger
+  - Plane3Trigger
+  - Plane4Trigger
+  - Plane5Trigger
   layers:
   - Default
   - TransparentFX
