@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     public Transform orientation;
-    private float horizontalInput =1.5f;
-    private float verticalInput = 2f;
+    private float horizontalInput;
+    private float verticalInput ;
 
     Vector3 moveDirection;
     Rigidbody rb;
@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.1f, groundMask);
         if (isGrounded)
         {
@@ -42,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerBuild.isMain)
         {
+            if (moveDirection == Vector3.zero)
+            {
+                rb.velocity = Vector3.zero;
+            }
             MovePlayer();
         }
     }
@@ -49,30 +55,6 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            verticalInput = 2f;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            verticalInput = -2f;
-        }
-        else
-        {
-            verticalInput = 0;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            horizontalInput = 1.5f;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            horizontalInput = -1.5f;
-        }
-        else
-        {
-            horizontalInput = 0;
-        }
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         rb.AddForce(moveDirection.normalized * speed * 10f);
         //* 10f, ForceMode.Force
