@@ -32,7 +32,7 @@ public class PoliceControl : MonoBehaviour
 
             if (  ( (vehicle.CompareTag("Player") || (vehicle.CompareTag("Car")) && (vehicle.gameObject != gameObject) )))
             {
-                // Araçlar arasýndaki mesafeyi kontrol et ve gerektiðinde yönünü deðiþtir
+                
 
                 Vector3 direction = transform.position - vehicle.transform.position;
 
@@ -41,7 +41,7 @@ public class PoliceControl : MonoBehaviour
                     _navMashCar.speed = 0f;
                     flagresume = false;
                     Invoke("ResumeMovement", 3f);
-                    //_navMashCar.SetDestination(transform.position + direction.normalized * safeDistance);
+                    
                 }
             }
         }
