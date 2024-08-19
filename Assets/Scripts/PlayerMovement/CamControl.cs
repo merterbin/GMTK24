@@ -14,19 +14,19 @@ public class CamControl : MonoBehaviour
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Get mouse input
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensY;
+        if (PlayerBuild.isMain)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensX;
+            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensY;
 
-        rotY += mouseX;
-        rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, -90f, 90f);
+            rotY += mouseX;
+            rotX -= mouseY;
+            rotX = Mathf.Clamp(rotX, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(rotX, rotY, 0f);
-        orientation.rotation = Quaternion.Euler(0f, rotY, 0f);
-        
+            transform.localRotation = Quaternion.Euler(rotX, rotY, 0f);
+            orientation.rotation = Quaternion.Euler(0f, rotY, 0f);
+        }    
     }
 }
