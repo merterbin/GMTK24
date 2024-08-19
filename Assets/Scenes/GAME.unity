@@ -553,6 +553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleBuilding: {fileID: 1197992268}
   database: {fileID: 11400000, guid: c0826d089fb67d84ebd0731b9be94822, type: 2}
+  scale: {x: 4, y: 1, z: 4}
+  position: {x: 40, y: 1, z: 41}
 --- !u!114 &178485077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,7 +907,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239141059}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 1}
+  m_CellSize: {x: 4, y: 4, z: 4}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -2664,7 +2666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1075629353
 Transform:
   m_ObjectHideFlags: 0
