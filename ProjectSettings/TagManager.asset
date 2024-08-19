@@ -10,6 +10,7 @@ TagManager:
   - Ladder
   - LadderTop
   - DoorInteract
+  - Desk
   layers:
   - Default
   - TransparentFX

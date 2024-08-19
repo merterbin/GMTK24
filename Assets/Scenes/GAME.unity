@@ -439,6 +439,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187771138}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &217830412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217830413}
+  - component: {fileID: 217830414}
+  m_Layer: 0
+  m_Name: DeskArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &217830413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217830412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2106323382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &217830414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217830412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.05, y: 1.05, z: 1.1}
+  m_Center: {x: -0.0011410713, y: 0.080036104, z: -0.062303387}
 --- !u!1 &237724105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,14 +1508,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: deskCamera
+      value: 
+      objectReference: {fileID: 744712397}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3295591393005938666, guid: abf8d304235f3944d9c20da3354cf26c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2029425576}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf8d304235f3944d9c20da3354cf26c, type: 3}
 --- !u!1001 &1196492919
 PrefabInstance:
@@ -1630,18 +1684,6 @@ MonoBehaviour:
   objectPlacer: {fileID: 304424896}
   preview: {fileID: 1098306253}
   planeArea: {fileID: 67240859}
---- !u!114 &1377869923 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1227558475481756364, guid: abf8d304235f3944d9c20da3354cf26c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1125289088}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1383068897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,26 +2112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2029425572 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3295591393005938666, guid: abf8d304235f3944d9c20da3354cf26c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1125289088}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2029425576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029425572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4bf09bdd52a5ab409caada966f3d934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1377869923}
-  deskCamera: {fileID: 744712397}
 --- !u!1 &2106323378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2126,7 @@ GameObject:
   - component: {fileID: 2106323379}
   m_Layer: 0
   m_Name: Desk
-  m_TagString: Untagged
+  m_TagString: Desk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,6 +2215,7 @@ Transform:
   m_LocalScale: {x: 2, y: 0.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 217830413}
   - {fileID: 440739430}
   - {fileID: 1441107250}
   - {fileID: 814870165}

@@ -13,6 +13,8 @@ public class PlayerBuild : MonoBehaviour
     public static bool isMain = false;
     public static bool isBuilding = false;
 
+    public static bool isDeskArea = false;
+
     private void OnEnable()
     {
         CameraSwitcher.Register(mainCamera);
@@ -33,9 +35,11 @@ public class PlayerBuild : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+  
+        if (Input.GetKeyDown(KeyCode.F) && isDeskArea)
         {
             if (CameraSwitcher.isActiveCamera(mainCamera) && deskCamera!= null)
             {
@@ -48,6 +52,22 @@ public class PlayerBuild : MonoBehaviour
                 isMain = true;
                 isBuilding = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Desk"))
+        {
+            isDeskArea = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Desk"))
+        {
+            isDeskArea = false;
         }
     }
 
