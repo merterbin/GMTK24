@@ -131,6 +131,7 @@ public class Triggers : MonoBehaviour
             isPlaying = false;
         }
         isPressed = false;
+        
     }
 
 }
