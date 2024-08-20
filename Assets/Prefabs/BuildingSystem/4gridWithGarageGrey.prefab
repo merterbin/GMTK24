@@ -83,6 +83,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4gridWithGarageGrey
       objectReference: {fileID: 0}
+    - target: {fileID: 2034618621072487734, guid: 40df3226bc2a6c44eb9ad76cb98637c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034618621072487734, guid: 40df3226bc2a6c44eb9ad76cb98637c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

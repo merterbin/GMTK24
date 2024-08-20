@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105147862298165916}
+  - component: {fileID: 2515103934110814584}
   m_Layer: 0
   m_Name: SignPlane1
   m_TagString: Untagged
@@ -34,6 +35,27 @@ Transform:
   - {fileID: 8902107746732696183}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!65 &2515103934110814584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738132671193733158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22902569, y: 0.543291, z: 0.34951878}
+  m_Center: {x: 0.074874006, y: 0.19427186, z: 0.10053365}
 --- !u!1 &919132149155446097
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,10 +98,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8902107746732696183}
   - component: {fileID: 2420254696589837321}
-  - component: {fileID: 9083700907171532468}
   m_Layer: 0
   m_Name: SignTrigger
-  m_TagString: Plane1Trigger
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,28 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 0}
-  player: {fileID: 0}
---- !u!65 &9083700907171532468
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969419458038882835}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.4274845, y: 0.9753313, z: 0.94345635}
-  m_Center: {x: 0.14886999, y: 0.012334665, z: 0.059705578}
+  progressText: {fileID: 0}
 --- !u!1 &8164078558771037576
 GameObject:
   m_ObjectHideFlags: 0

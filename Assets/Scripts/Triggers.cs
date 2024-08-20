@@ -20,7 +20,6 @@ public class Triggers : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("JobTaken: " + jobTaken);
         if (Input.GetKeyDown(KeyCode.F) && (inArea || inDoorArea))
         {
             Debug.Log("F key was pressed");
