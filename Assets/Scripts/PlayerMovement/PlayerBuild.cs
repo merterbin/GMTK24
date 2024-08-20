@@ -24,6 +24,11 @@ public class PlayerBuild : MonoBehaviour
     public static bool isBuilding = false;
     public static bool isDeskArea = false;
 
+    [SerializeField]
+    private GameObject focusButtonPanel;
+    [SerializeField]
+    private GameObject BuildButtonPanel;
+
     private void OnEnable()
     {
         CameraSwitcher.Register(mainCamera);
@@ -91,14 +96,27 @@ public class PlayerBuild : MonoBehaviour
                 buildPanel2.SetActive(false);
             }
         }
+
+    
+
+        if(!isBuilding && isDeskArea)
+        {
+            focusButtonPanel.SetActive(true);
+            BuildButtonPanel.SetActive(true);
+        }
+        else
+        {
+            focusButtonPanel.SetActive(false);
+            BuildButtonPanel.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Desk"))
         {
-            Debug.Log("desk");
             isDeskArea = true;
+
         }
     }
 
