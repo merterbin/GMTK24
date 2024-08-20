@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PlayerTrigger : MonoBehaviour
 {
@@ -42,6 +43,16 @@ public class PlayerTrigger : MonoBehaviour
         
             }
         }  
+        foreach (bool j in Jobs)
+        {
+            if (j)
+            {
+                sings[Jobs.IndexOf(j)].SetActive(false);
+
+            }
+        }
+        
+        
     }
 
 
@@ -91,6 +102,18 @@ public class PlayerTrigger : MonoBehaviour
             {
                 g.SetActive(false);
             }
+        }
+    }
+    public void enableSigns()
+    {
+        for (int i = 0; i < sings.Count; i++)
+        {
+            if (Jobs[i])
+            { 
+                sings[i].SetActive(false);
+            }
+            sings[i].SetActive(true);
+            takeJob = false;
         }
     }
 
