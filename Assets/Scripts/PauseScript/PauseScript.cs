@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
@@ -24,17 +25,23 @@ public class PauseScript : MonoBehaviour
         Cursor.visible = false;
 
     }
+    public void goHome()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+        
+    }
     private void Update()
     {
         if (isExit)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 StartButton();
                 isExit = false;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
             {
                 PauseButton();
                 isExit = true;
