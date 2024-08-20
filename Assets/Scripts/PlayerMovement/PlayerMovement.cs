@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.drag = 0;
         }
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
         SpeedControl();
     }
     private void FixedUpdate()
@@ -48,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = Vector3.zero;
             }
+            Debug.Log("Is Ground: " + isGrounded);
+            
             MovePlayer();
         }
     }
@@ -70,4 +76,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
+    private void Jump()
+    {
+        rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+    }
+
 }
