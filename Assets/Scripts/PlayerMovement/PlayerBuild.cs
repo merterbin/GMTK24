@@ -29,6 +29,16 @@ public class PlayerBuild : MonoBehaviour
     [SerializeField]
     private GameObject BuildButtonPanel;
 
+
+    [SerializeField]
+    private ObjectPlacer SquarePlacer;
+    [SerializeField]
+    private ObjectPlacer ReactangalePlacer;
+
+    [SerializeField]
+    public List<ScaleBuildingSystem> buildingSystems;
+
+
     private void OnEnable()
     {
         CameraSwitcher.Register(mainCamera);
@@ -96,6 +106,11 @@ public class PlayerBuild : MonoBehaviour
                 buildPanel2.SetActive(false);
             }
         }
+        else if(Input.GetKeyDown(KeyCode.B) && isDeskArea)
+        {
+            Build();
+        }
+
 
     
 
@@ -125,6 +140,68 @@ public class PlayerBuild : MonoBehaviour
         if (collision.gameObject.CompareTag("Desk"))
         {
             isDeskArea = false;
+        }
+    }
+
+
+    public void Build()
+    {
+        if ((Ptrigger.job == "SignPlane1" || Ptrigger.job == "SignPlane4") && !isBuilding)
+        {
+            for(int i = 0; i < SquarePlacer.placedGameObject.Count; i++)
+            {
+                if (SquarePlacer.placedGameObject[i] != null)
+                {
+                    if (SquarePlacer.positionGameObject[i] != null)
+                    {
+                        if(Ptrigger.job == "SignPlane1")
+                        {
+                            buildingSystems[0].AddItem(SquarePlacer.positionGameObject[i], SquarePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[0] = true; 
+                        }
+                        else
+                        {
+                            buildingSystems[3].AddItem(SquarePlacer.positionGameObject[i], SquarePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[3] = true;
+                        }
+                    }
+                }
+            }
+            DestroyALL(SquarePlacer.placedGameObject);
+
+        }
+        else if ((Ptrigger.job == "SignPlane2" || Ptrigger.job == "SignPlane3") && !isBuilding)
+        {
+            for (int i = 0; i < ReactangalePlacer.placedGameObject.Count; i++)
+            {
+                if (ReactangalePlacer.placedGameObject[i] != null)
+                {
+                    if (ReactangalePlacer.positionGameObject[i] != null)
+                    {
+                        if (Ptrigger.job == "SignPlane2")
+                        {
+                            buildingSystems[2].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[2] = true;
+                        }
+                        else
+                        {
+                            buildingSystems[3].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[3] = true;
+                        }
+                    }
+                }
+            }
+            DestroyALL(ReactangalePlacer.placedGameObject);
+        }
+
+    }
+
+    public void DestroyALL(List<GameObject> gbs)
+    {
+        foreach(GameObject gb in gbs)
+        {
+            if(gb != null)
+                Destroy(gb);
         }
     }
 

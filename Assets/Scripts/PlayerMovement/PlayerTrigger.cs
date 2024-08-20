@@ -16,7 +16,10 @@ public class PlayerTrigger : MonoBehaviour
     TextMeshProUGUI progressText;
 
     [SerializeField]
-    private List<GameObject> sings = null;
+    public List<bool> Jobs = new();
+
+    [SerializeField]
+    private List<GameObject> sings = new();
 
     private void Start()
     {

@@ -7,7 +7,9 @@ using UnityEngine;
 public class ObjectPlacer : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> placedGameObject = new();
+    public List<GameObject> placedGameObject = new();
+    [SerializeField]
+    public List<Vector3> positionGameObject= new();
 
     [SerializeField]
     private GameObject builds;
@@ -30,7 +32,7 @@ public class ObjectPlacer : MonoBehaviour
         newObject.transform.position = new Vector3(position.x,height,position.z); 
         newObject.transform.localScale = size;
         placedGameObject.Add(newObject);
-        Debug.Log(CalculateGridPosition(startLocation, newObject));
+        positionGameObject.Add(CalculateGridPosition(startLocation, newObject));
         TriggerScaleBuilding(CalculateGridPosition(startLocation, newObject), prefab);
         return placedGameObject.Count - 1;
     }

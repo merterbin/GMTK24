@@ -15,7 +15,7 @@ MonoBehaviour:
   objectsData:
   - <Name>k__BackingField: oneBlock
     <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4140032520086752024, guid: aa4410d3d0c1adb4b8858c2468eaac0f,
       type: 3}
   - <Name>k__BackingField: oneBlock2
@@ -30,7 +30,7 @@ MonoBehaviour:
       type: 3}
   - <Name>k__BackingField: twoBlock
     <ID>k__BackingField: 3
-    <Size>k__BackingField: {x: 2, y: 1}
+    <Size>k__BackingField: {x: 4, y: 2}
     <Prefab>k__BackingField: {fileID: 2812183220172942301, guid: bad2890df10248a439d25cd73dfea47c,
       type: 3}
   - <Name>k__BackingField: twoBlock2
