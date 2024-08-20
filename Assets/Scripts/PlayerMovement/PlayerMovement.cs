@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float speed;
     public float groundDrag;
+    public float jumpSpeed = 5f;
     [Header("Ground Check")]
 
     public float playerHeight;
@@ -48,9 +49,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerBuild.isMain)
         {
-            if (moveDirection == Vector3.zero)
+            if (moveDirection == Vector3.zero )
             {
-                rb.velocity = Vector3.zero;
+                rb.velocity = new Vector3(0, rb.velocity.y, 0);
             }
             Debug.Log("Is Ground: " + isGrounded);
             
@@ -78,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.Impulse);
+        
     }
 
 }
