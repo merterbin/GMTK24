@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditor;  BUILDLERKEN HATA VERÝYOR
-//using UnityEditor.SearchService;
+using UnityEditor;  
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering;
