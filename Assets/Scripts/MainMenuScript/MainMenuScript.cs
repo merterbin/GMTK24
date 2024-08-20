@@ -11,15 +11,6 @@ public class MainMenuScript : MonoBehaviour
     public float movementduration = 1.3f;
     public GameObject canvas;
     public GameObject settingCanvas;
-    public void PlayButton()
-    {
-        StartCoroutine(StopAndLoadNextScene());
-    }
-    private IEnumerator StopAndLoadNextScene()
-    {
-        yield return new WaitForSeconds(movementduration);
-        SceneManager.LoadScene(1); 
-    }
     public void QuitButton()
     {
         Application.Quit();

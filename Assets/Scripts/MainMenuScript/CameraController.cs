@@ -16,8 +16,6 @@ public class CameraController : MonoBehaviour
         if (shouldMove)
         {
             transform.Translate(direction * speed * Time.deltaTime);
-
-            
             Invoke("StartMovement", 1.3f);
         }
 
