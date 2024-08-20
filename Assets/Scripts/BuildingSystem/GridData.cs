@@ -37,8 +37,12 @@ public class GridData
     public bool CanPlaceObejctAt(Vector3Int gridPosition, Vector2Int objectSize, PlaneArea plane)
     {
         List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectSize);
+       
         foreach (var pos in positionToOccupy)
         {
+            Debug.Log(pos);
+            Debug.Log(plane.RightArea);
+            Debug.Log(plane.LeftArea);
             if (pos.z == plane.TopArea.z && objectSize.y > 1)
                 return false;
             if (pos.x == plane.RightArea.x && objectSize.x > 1)

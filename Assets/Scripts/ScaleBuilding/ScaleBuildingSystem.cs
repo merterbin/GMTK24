@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class ScaleBuildingSystem : MonoBehaviour
 
     public void AddItem(Vector3 gridPosition, GameObject prefab)
     {
+        Debug.Log(gridPosition);
         GameObject scaleObject = Instantiate(prefab,ScaleBuilding.transform);
         //scaleObject.transform.SetParent(ScaleBuilding.transform,true);
 
