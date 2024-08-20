@@ -182,14 +182,14 @@ public class PlayerBuild : MonoBehaviour
                     {
                         if (Ptrigger.job == "SignPlane2")
                         {
-                            buildingSystems[2].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
-                            Ptrigger.Jobs[2] = true;
+                            buildingSystems[1].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[1] = true;
                             Ptrigger.enableSigns();
                         }
                         else
                         {
-                            buildingSystems[3].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
-                            Ptrigger.Jobs[3] = true;
+                            buildingSystems[2].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
+                            Ptrigger.Jobs[2] = true;
                             Ptrigger.enableSigns();
                         }
                     }
