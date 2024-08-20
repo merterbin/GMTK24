@@ -56,7 +56,7 @@ Material:
     - _QueueOffset: 0
     - _Transparent: 0
     m_Colors:
-    - _Background_Color: {r: 0.1764706, g: 0.627451, b: 0.14509805, a: 1}
+    - _Background_Color: {r: 0.46666667, g: 0.75686276, b: 0.7294118, a: 1}
     - _Cell_Size: {r: 2, g: 2, b: 0, a: 0}
-    - _Grid_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Grid_Color: {r: 0.46666667, g: 0.75686276, b: 0.7294118, a: 0}
   m_BuildTextureStacks: []
