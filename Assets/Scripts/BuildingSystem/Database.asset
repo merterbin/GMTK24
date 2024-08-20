@@ -30,12 +30,12 @@ MonoBehaviour:
       type: 3}
   - <Name>k__BackingField: twoBlock
     <ID>k__BackingField: 3
-    <Size>k__BackingField: {x: 1, y: 2}
+    <Size>k__BackingField: {x: 2, y: 1}
     <Prefab>k__BackingField: {fileID: 2812183220172942301, guid: bad2890df10248a439d25cd73dfea47c,
       type: 3}
   - <Name>k__BackingField: twoBlock2
     <ID>k__BackingField: 4
-    <Size>k__BackingField: {x: 1, y: 2}
+    <Size>k__BackingField: {x: 2, y: 1}
     <Prefab>k__BackingField: {fileID: 9201144155143286023, guid: 0791fd95edbe9174490adf323087b906,
       type: 3}
   - <Name>k__BackingField: fourBlock
