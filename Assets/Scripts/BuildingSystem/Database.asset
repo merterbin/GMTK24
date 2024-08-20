@@ -20,12 +20,12 @@ MonoBehaviour:
       type: 3}
   - <Name>k__BackingField: oneBlock2
     <ID>k__BackingField: 1
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 5734799659129949541, guid: 710b92e3292c47a49b52bdcf7f2384cd,
       type: 3}
   - <Name>k__BackingField: oneBlock2
     <ID>k__BackingField: 2
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 2289730933189064004, guid: 86620c1a9836c224eba4a395f596ea71,
       type: 3}
   - <Name>k__BackingField: twoBlock
@@ -35,26 +35,26 @@ MonoBehaviour:
       type: 3}
   - <Name>k__BackingField: twoBlock2
     <ID>k__BackingField: 4
-    <Size>k__BackingField: {x: 2, y: 1}
+    <Size>k__BackingField: {x: 4, y: 2}
     <Prefab>k__BackingField: {fileID: 9201144155143286023, guid: 0791fd95edbe9174490adf323087b906,
       type: 3}
   - <Name>k__BackingField: fourBlock
     <ID>k__BackingField: 5
-    <Size>k__BackingField: {x: 2, y: 2}
+    <Size>k__BackingField: {x: 4, y: 4}
     <Prefab>k__BackingField: {fileID: 572473018073078022, guid: 5e5ef2f8b6ad5804cb454aac0433b74c,
       type: 3}
   - <Name>k__BackingField: fourBlock2
     <ID>k__BackingField: 6
-    <Size>k__BackingField: {x: 2, y: 2}
+    <Size>k__BackingField: {x: 4, y: 4}
     <Prefab>k__BackingField: {fileID: 2118944174544847158, guid: f8553704bb6661e4fb47f315db4a4f02,
       type: 3}
   - <Name>k__BackingField: fourBlock3
     <ID>k__BackingField: 7
-    <Size>k__BackingField: {x: 2, y: 2}
+    <Size>k__BackingField: {x: 4, y: 4}
     <Prefab>k__BackingField: {fileID: 6535437678583310424, guid: 2307ca7ba7899b84c8ca51509920856d,
       type: 3}
   - <Name>k__BackingField: fourBlock4
     <ID>k__BackingField: 8
-    <Size>k__BackingField: {x: 2, y: 2}
+    <Size>k__BackingField: {x: 4, y: 4}
     <Prefab>k__BackingField: {fileID: 6347363891214061280, guid: 743116d06c5695a49a3c27d697b0877e,
       type: 3}
