@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: ad7166e12e11e374db2487d54267729d,
+  m_LightingDataAsset: {fileID: 112000000, guid: b0e9535b2f815784cb7ed77bced3fb29,
     type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
@@ -736,6 +736,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Office
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547013583415747042, guid: d7e5f2e142f67524bbcc0df065f017aa,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547013583415747042, guid: d7e5f2e142f67524bbcc0df065f017aa,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0.42382812
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547013583415747042, guid: d7e5f2e142f67524bbcc0df065f017aa,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.1e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547013583415747042, guid: d7e5f2e142f67524bbcc0df065f017aa,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 580
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
