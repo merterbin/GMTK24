@@ -8,7 +8,7 @@ public class PlayerBuild : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera mainCamera;
     [SerializeField]
-    private CinemachineVirtualCamera deskCamera = null;
+    public CinemachineVirtualCamera deskCamera = null;
 
     [SerializeField]
     private GameObject buildPanel;

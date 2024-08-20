@@ -9,7 +9,7 @@ public class PlayerTrigger : MonoBehaviour
     private GameObject collisonPlane = null;
 
     [SerializeField]
-    private string job = "";
+    public string job = "";
     private bool takeJob = false;
 
     [SerializeField] 
