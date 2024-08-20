@@ -9,9 +9,6 @@ public class FindBuild : MonoBehaviour
     private PlayerTrigger Ptrigger;
 
     [SerializeField]
-    private PlayerBuild Pbuild;
-
-    [SerializeField]
     private GameObject ReactangalePanel;
     [SerializeField]
     private GameObject SquarePanel;
@@ -36,14 +33,13 @@ public class FindBuild : MonoBehaviour
             {
                 ReactangalePanel.SetActive(false);
                 SquarePanel.SetActive(true);
-                Pbuild.deskCamera = SquareCamera;
+
                 
             }
             else if (Ptrigger.job == "SignPlane2" || Ptrigger.job == "SignPlane3")
             {
                 ReactangalePanel.SetActive(true);
                 SquarePanel.SetActive(false);
-                Pbuild.deskCamera = ReactangaleCamera;
             }
         }
     }

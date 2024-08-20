@@ -49042,12 +49042,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
         type: 3}
+      propertyPath: Ptrigger
+      value: 
+      objectReference: {fileID: 1062054710}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
       propertyPath: buildPanel
       value: 
       objectReference: {fileID: 812852067}
     - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
         type: 3}
       propertyPath: deskCamera
+      value: 
+      objectReference: {fileID: 1590044855}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: buildPanel1
+      value: 
+      objectReference: {fileID: 1708062799}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: buildPanel2
+      value: 
+      objectReference: {fileID: 812852067}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: deskCamera1
+      value: 
+      objectReference: {fileID: 6932522491784980648}
+    - target: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
+        type: 3}
+      propertyPath: deskCamera2
       value: 
       objectReference: {fileID: 1590044855}
     m_RemovedComponents: []
@@ -53676,18 +53701,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 964835682}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1062054706 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7769647433502646722, guid: abf8d304235f3944d9c20da3354cf26c,
-    type: 3}
-  m_PrefabInstance: {fileID: 964835682}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062054705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4bf09bdd52a5ab409caada966f3d934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1062054710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113323,7 +113336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ptrigger: {fileID: 1062054710}
-  Pbuild: {fileID: 1062054706}
   ReactangalePanel: {fileID: 2135339811}
   SquarePanel: {fileID: 7660432669102105371}
   ReactangaleCamera: {fileID: 1590044855}

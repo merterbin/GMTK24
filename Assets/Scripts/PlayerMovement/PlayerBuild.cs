@@ -8,10 +8,17 @@ public class PlayerBuild : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera mainCamera;
     [SerializeField]
-    public CinemachineVirtualCamera deskCamera = null;
+    public CinemachineVirtualCamera deskCamera1 = null;
+    [SerializeField]
+    public CinemachineVirtualCamera deskCamera2 = null;
 
     [SerializeField]
-    private GameObject buildPanel;
+    private PlayerTrigger Ptrigger;
+
+    [SerializeField]
+    private GameObject buildPanel1;
+    [SerializeField]
+    private GameObject buildPanel2;
 
     public static bool isMain = false;
     public static bool isBuilding = false;
@@ -20,9 +27,13 @@ public class PlayerBuild : MonoBehaviour
     private void OnEnable()
     {
         CameraSwitcher.Register(mainCamera);
-        if(deskCamera != null)
+        if(deskCamera1 != null)
         {
-            CameraSwitcher.Register(deskCamera);
+            CameraSwitcher.Register(deskCamera1);
+        }
+        if (deskCamera2 != null)
+        {
+            CameraSwitcher.Register(deskCamera2);
         }
         CameraSwitcher.SwitchCamera(mainCamera);
         isMain = true;
@@ -31,9 +42,13 @@ public class PlayerBuild : MonoBehaviour
     private void OnDisable()
     {
         CameraSwitcher.Unregister(mainCamera);
-        if (deskCamera != null)
+        if (deskCamera1 != null)
         {
-            CameraSwitcher.Unregister(deskCamera);
+            CameraSwitcher.Unregister(deskCamera1);
+        }
+        if (deskCamera2 != null)
+        {
+            CameraSwitcher.Unregister(deskCamera2);
         }
     }
 
@@ -43,14 +58,28 @@ public class PlayerBuild : MonoBehaviour
   
         if (Input.GetKeyDown(KeyCode.E) && isDeskArea)
         {
-            if (CameraSwitcher.isActiveCamera(mainCamera) && deskCamera!= null)
+
+            if (CameraSwitcher.isActiveCamera(mainCamera))
             {
-                buildPanel.SetActive(true);
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                CameraSwitcher.SwitchCamera(deskCamera);
-                isMain = false;
-                isBuilding = true;
+                if ((Ptrigger.job == "SignPlane1" || Ptrigger.job == "SignPlane4") && deskCamera1 != null)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    buildPanel1.SetActive(true);
+                    CameraSwitcher.SwitchCamera(deskCamera1);
+                    isMain = false;
+                    isBuilding = true;
+
+                }
+                else if ((Ptrigger.job == "SignPlane2" || Ptrigger.job == "SignPlane3") && deskCamera2 != null)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    buildPanel2.SetActive(true);
+                    CameraSwitcher.SwitchCamera(deskCamera2);
+                    isMain = false;
+                    isBuilding = true;
+                }  
             }
             else {
                 CameraSwitcher.SwitchCamera(mainCamera);
@@ -58,7 +87,8 @@ public class PlayerBuild : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 isMain = true;
                 isBuilding = false;
-                buildPanel.SetActive(false);
+                buildPanel1.SetActive(false);
+                buildPanel2.SetActive(false);
             }
         }
     }
