@@ -4305,7 +4305,8 @@ PrefabInstance:
       propertyPath: progressText
       value: 
       objectReference: {fileID: 2093368332}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2420254696589837321, guid: 5c812563428b87940854c986324245a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -56049,7 +56050,8 @@ PrefabInstance:
       propertyPath: progressText
       value: 
       objectReference: {fileID: 2093368332}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2420254696589837321, guid: 5c812563428b87940854c986324245a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -88959,6 +88961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9083700907171532468, guid: 5c812563428b87940854c986324245a8, type: 3}
+    - {fileID: 2420254696589837321, guid: 5c812563428b87940854c986324245a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -90284,7 +90287,8 @@ PrefabInstance:
       propertyPath: progressText
       value: 
       objectReference: {fileID: 2093368332}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2420254696589837321, guid: 5c812563428b87940854c986324245a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
