@@ -4,7 +4,7 @@ public class LadderClimb : MonoBehaviour
 {
     public float climbSpeed = 3.0f;
     private bool isClimbing = false;
-    private bool isTop = false;
+
     private Rigidbody rb;
 
     void Start()

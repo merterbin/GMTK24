@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7769647433502646722}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1227558475481756364}
   deskCamera: {fileID: 0}
+  buildPanel: {fileID: 0}
 --- !u!1 &5138352505901131840
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +317,7 @@ GameObject:
   - component: {fileID: 2019734601427893202}
   m_Layer: 0
   m_Name: PlayerObj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

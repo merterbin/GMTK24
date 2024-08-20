@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using TMPro;
 
 public class Triggers : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class Triggers : MonoBehaviour
     private bool jobTaken;
     private bool isPressed = false;
     private bool inArea = false;
+    private bool inDoorArea = false;
     private bool isPlayer = false;
     [SerializeField] Animator doorAnim;
     [SerializeField] TextMeshProUGUI progressText;
@@ -21,10 +21,12 @@ public class Triggers : MonoBehaviour
     private void Update()
     {
         Debug.Log("JobTaken: " + jobTaken);
-        if (Input.GetKeyDown(KeyCode.F) && inArea)
+        if (Input.GetKeyDown(KeyCode.F) && (inArea || inDoorArea))
         {
             Debug.Log("F key was pressed");
+           
             isPressed = true;
+            
         }
         else if (Input.GetKeyDown(KeyCode.F) && !inArea)
         {
@@ -32,6 +34,8 @@ public class Triggers : MonoBehaviour
         }
 
     }
+    
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -40,15 +44,15 @@ public class Triggers : MonoBehaviour
         }
         if (this.gameObject.tag == "DoorInteract" && isPlayer)
         {
-            inArea = true;
-            Debug.Log("Player entered");
+            Debug.Log("Is Playin: " + isPlaying);
+            inDoorArea = true;
             if (isPressed && !isPlaying)
             {
-               
                 doorAnim.Play("DoorOpen", 0, 0.0f);
+                isPlaying = true;
                 //doorAnim.Play("DoorOpen", 0, 0.0f);
                 progressText.text = "Your desk is upstairs.";
-                isPlaying = true;
+                
             }            
         }
 
@@ -56,14 +60,13 @@ public class Triggers : MonoBehaviour
         {
             inArea = true;
             Debug.Log("Player entered Plane 1");
-            if (isPressed && !jobTaken)
-            {
+            if (isPressed && jobTaken == false )
+            {                
                 Transform parentSign = this.transform.parent;
                 Destroy(parentSign.gameObject);
+                progressText.text = "Go to your office.";
                 jobTaken = true;
-                progressText.text = "Go to the your office.";
-
-                Debug.Log("Job taken " + jobTaken);
+                Debug.Log("Job 1 taken ");
             }
             
         }
@@ -71,12 +74,13 @@ public class Triggers : MonoBehaviour
         {
             inArea = true;
             Debug.Log("Player entered Plane 2");
-            if (isPressed && !jobTaken)
+            if (isPressed && jobTaken == false)
             {
                 Transform parentSign = this.transform.parent;
                 Destroy(parentSign.gameObject);
+                progressText.text = "Go to your office.";
                 jobTaken = true;
-                progressText.text = "Go to the your office.";
+                Debug.Log("Job 2 taken ");
 
             }
         }
@@ -86,11 +90,10 @@ public class Triggers : MonoBehaviour
             Debug.Log("Player entered Plane 3");
             if (isPressed && !jobTaken)
             {   
-                jobTaken = true;
                 Transform parentSign = this.transform.parent;
                 Destroy(parentSign.gameObject);
-                progressText.text = "Go to the your office.";
-
+                progressText.text = "Go to your office.";
+                jobTaken = true;
             }
         }
         else if (this.gameObject.tag == "Plane4Trigger" && isPlayer)
@@ -99,23 +102,10 @@ public class Triggers : MonoBehaviour
             Debug.Log("Player entered Plane 4");
             if (isPressed && !jobTaken)
             {   
-                jobTaken = true;
                 Transform parentSign = this.transform.parent;
                 Destroy(parentSign.gameObject);
-                progressText.text = "Go to the your office.";
-
-            }
-        }
-        else if (this.gameObject.tag == "Plane5Trigger" && isPlayer)
-        {
-            inArea = true;
-            Debug.Log("Player entered Plane 5");
-            if (isPressed && !jobTaken)
-            {   
+                progressText.text = "Go to your office.";
                 jobTaken = true;
-                Transform parentSign = this.transform.parent;
-                Destroy(parentSign.gameObject);
-                progressText.text = "Go to the your office.";
 
             }
         }
@@ -133,5 +123,6 @@ public class Triggers : MonoBehaviour
         isPressed = false;
         
     }
+    
 
 }

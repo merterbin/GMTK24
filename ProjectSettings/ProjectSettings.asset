@@ -915,11 +915,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: a6b5cad1-9ad3-45e3-bfbc-878cba3a223c
+  cloudProjectId: aaab88dd-7454-4022-85b9-9117d417c040
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GMTK24Urp
-  organizationId: ersagunfatih
+  projectName: GMTK24
+  organizationId: merterbin
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
