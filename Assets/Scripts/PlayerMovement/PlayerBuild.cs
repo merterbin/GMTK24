@@ -157,12 +157,14 @@ public class PlayerBuild : MonoBehaviour
                         if(Ptrigger.job == "SignPlane1")
                         {
                             buildingSystems[0].AddItem(SquarePlacer.positionGameObject[i], SquarePlacer.placedGameObject[i]);
-                            Ptrigger.Jobs[0] = true; 
+                            Ptrigger.Jobs[0] = true;
+                            Ptrigger.enableSigns();
                         }
                         else
                         {
                             buildingSystems[3].AddItem(SquarePlacer.positionGameObject[i], SquarePlacer.placedGameObject[i]);
                             Ptrigger.Jobs[3] = true;
+                            Ptrigger.enableSigns();
                         }
                     }
                 }
@@ -182,11 +184,13 @@ public class PlayerBuild : MonoBehaviour
                         {
                             buildingSystems[2].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
                             Ptrigger.Jobs[2] = true;
+                            Ptrigger.enableSigns();
                         }
                         else
                         {
                             buildingSystems[3].AddItem(ReactangalePlacer.positionGameObject[i], ReactangalePlacer.placedGameObject[i]);
                             Ptrigger.Jobs[3] = true;
+                            Ptrigger.enableSigns();
                         }
                     }
                 }
